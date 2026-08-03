@@ -57,8 +57,8 @@ pipeline {
 
         stage('Update Kubernetes Deployment Manifest File') {
             environment {
-                GIT_REPO_NAME = "REALTIMEPROJECT"
-                GIT_USER_NAME = "devopstraininghub"
+                GIT_REPO_NAME = "ansible"
+                GIT_USER_NAME = "lohitht909"
             }
             steps {
                 withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
