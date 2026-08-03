@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mc-app
-        image: lohith0720/ansible:15
+        image: lohith0720/ansible:16
         ports:
         - containerPort: 8080
 ---
