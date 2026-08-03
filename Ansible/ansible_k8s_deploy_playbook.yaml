@@ -1,0 +1,16 @@
+
+---
+- name: Deploy application into EKS cluster
+  hosts: appserver
+  gather_facts: no
+  become: yes
+
+  tasks:
+
+    - name: Copy Kubernetes deployment file to app server
+      copy:
+        src: "{{ playbook_dir }}/k8s_deployment.yaml"
+        dest: /opt/k8s_deployment.yaml
+
+    - name: Apply Kubernetes deployment
+      command: kubectl apply -f /opt/k8s_deployment.yaml
